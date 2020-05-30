@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 
-private let reuseIdentifer = "ConversationCell"
+private let reuseIdentifier = "ConversationCell"
 
 class ConversationsController: UIViewController {
     
@@ -81,7 +81,7 @@ class ConversationsController: UIViewController {
     func configureUI() {
         view.backgroundColor = .white
         
-        configureNavigationBar()
+        configureNavigationBar(withTitle: "Messages", prefersLargeTitles: true)
         configureTableView()
         
         let image = UIImage(systemName: "person.circle.fill")
@@ -98,31 +98,13 @@ class ConversationsController: UIViewController {
     func configureTableView() {
         tableView.backgroundColor = .white
         tableView.rowHeight = 80
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifer)
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.tableFooterView = UIView()
         tableView.delegate = self
         tableView.dataSource = self
         
         view.addSubview(tableView)
         tableView.frame = view.frame
-    }
-    
-    func configureNavigationBar() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.backgroundColor = .systemPurple
-        
-        navigationController?.navigationBar.standardAppearance = appearance
-        navigationController?.navigationBar.compactAppearance = appearance
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Messages"
-        navigationController?.navigationBar.tintColor = .white
-        navigationController?.navigationBar.isTranslucent = true
-        
-        navigationController?.navigationBar.overrideUserInterfaceStyle = .dark
     }
 }
 
@@ -132,7 +114,7 @@ extension ConversationsController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifer, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         cell.textLabel?.text = "Test Cell"
         return cell
     }
