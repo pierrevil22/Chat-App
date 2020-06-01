@@ -28,6 +28,14 @@
 		FF696F9F24829215009D2315 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696F9E24829215009D2315 /* UserCell.swift */; };
 		FF696FA12482B045009D2315 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FA02482B045009D2315 /* User.swift */; };
 		FF696FA32482B0FA009D2315 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FA22482B0FA009D2315 /* Service.swift */; };
+		FF696FA524834E0E009D2315 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FA424834E0E009D2315 /* ChatController.swift */; };
+		FF696FA7248357DE009D2315 /* CustomInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FA6248357DE009D2315 /* CustomInputAccessoryView.swift */; };
+		FF696FA924841EC4009D2315 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FA824841EC4009D2315 /* MessageCell.swift */; };
+		FF696FAB24842D03009D2315 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FAA24842D03009D2315 /* Message.swift */; };
+		FF696FAD24843807009D2315 /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FAC24843807009D2315 /* MessageViewModel.swift */; };
+		FF696FAF2484B1FB009D2315 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FAE2484B1FB009D2315 /* Constants.swift */; };
+		FF696FB12485848F009D2315 /* ConversationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FB02485848F009D2315 /* ConversationCell.swift */; };
+		FF696FB324858C55009D2315 /* ConversationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF696FB224858C55009D2315 /* ConversationViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +64,14 @@
 		FF696F9E24829215009D2315 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		FF696FA02482B045009D2315 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FF696FA22482B0FA009D2315 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		FF696FA424834E0E009D2315 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		FF696FA6248357DE009D2315 /* CustomInputAccessoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomInputAccessoryView.swift; sourceTree = "<group>"; };
+		FF696FA824841EC4009D2315 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
+		FF696FAA24842D03009D2315 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FF696FAC24843807009D2315 /* MessageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
+		FF696FAE2484B1FB009D2315 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FF696FB02485848F009D2315 /* ConversationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationCell.swift; sourceTree = "<group>"; };
+		FF696FB224858C55009D2315 /* ConversationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				FF696F8D247DFC8E009D2315 /* Extensions.swift */,
+				FF696FAE2484B1FB009D2315 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -149,6 +166,7 @@
 				FF4627F2247C6B57005AA192 /* Authentication */,
 				FF4627F0247445DF005AA192 /* ConversationsController.swift */,
 				FF696F9C24827D17009D2315 /* NewMessageController.swift */,
+				FF696FA424834E0E009D2315 /* ChatController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +175,8 @@
 			isa = PBXGroup;
 			children = (
 				FF696F97247F47A8009D2315 /* Authentication */,
+				FF696FAC24843807009D2315 /* MessageViewModel.swift */,
+				FF696FB224858C55009D2315 /* ConversationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +187,9 @@
 				FF696F8F247E123F009D2315 /* InputContainerView.swift */,
 				FF696F91247E1A22009D2315 /* CustomTextField.swift */,
 				FF696F9E24829215009D2315 /* UserCell.swift */,
+				FF696FA6248357DE009D2315 /* CustomInputAccessoryView.swift */,
+				FF696FA824841EC4009D2315 /* MessageCell.swift */,
+				FF696FB02485848F009D2315 /* ConversationCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -175,6 +198,7 @@
 			isa = PBXGroup;
 			children = (
 				FF696FA02482B045009D2315 /* User.swift */,
+				FF696FAA24842D03009D2315 /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -314,21 +338,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF4627DB247444EC005AA192 /* ViewController.swift in Sources */,
+				FF696FAF2484B1FB009D2315 /* Constants.swift in Sources */,
 				FF696F96247F4789009D2315 /* RegistrationViewModel.swift in Sources */,
 				FF696F90247E123F009D2315 /* InputContainerView.swift in Sources */,
 				FF696F9B24809C9C009D2315 /* AuthService.swift in Sources */,
+				FF696FAD24843807009D2315 /* MessageViewModel.swift in Sources */,
 				FF4627D7247444EC005AA192 /* AppDelegate.swift in Sources */,
 				FF4627F1247445DF005AA192 /* ConversationsController.swift in Sources */,
 				FF696F9F24829215009D2315 /* UserCell.swift in Sources */,
 				FF4627D9247444EC005AA192 /* SceneDelegate.swift in Sources */,
 				FF696FA12482B045009D2315 /* User.swift in Sources */,
 				FF696FA32482B0FA009D2315 /* Service.swift in Sources */,
+				FF696FA924841EC4009D2315 /* MessageCell.swift in Sources */,
+				FF696FB324858C55009D2315 /* ConversationViewModel.swift in Sources */,
 				FF4627F6247C6BFD005AA192 /* RegistrationController.swift in Sources */,
 				FF4627F4247C6B95005AA192 /* LoginController.swift in Sources */,
 				FF696F8E247DFC8E009D2315 /* Extensions.swift in Sources */,
 				FF696F94247E948E009D2315 /* LoginViewModel.swift in Sources */,
+				FF696FA524834E0E009D2315 /* ChatController.swift in Sources */,
 				FF696F92247E1A22009D2315 /* CustomTextField.swift in Sources */,
+				FF696FB12485848F009D2315 /* ConversationCell.swift in Sources */,
+				FF696FAB24842D03009D2315 /* Message.swift in Sources */,
 				FF696F9D24827D17009D2315 /* NewMessageController.swift in Sources */,
+				FF696FA7248357DE009D2315 /* CustomInputAccessoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
